@@ -23,7 +23,7 @@ def LoadViTLAndCIFAR10():
     #Load ViT-L-16
     config = CONFIGS["ViT-L_16"]
     model = VisionTransformer(config, imgSize, zero_head=True, num_classes=numClasses)
-    dir = "Models/ViT-L_16,cifar10,run0_15K_checkpoint.bin"
+    dir = "/content/drive/My Drive/Vision Transformer/ViT-L_16,cifar10,run0_15K_checkpoint.bin"
     dict = torch.load(dir)
     model.load_state_dict(dict)
     model.eval()
